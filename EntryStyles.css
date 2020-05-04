@@ -1,0 +1,110 @@
+* {
+   box-sizing: border-box;
+}
+ 
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0;
+}
+ 
+/* Style the header */
+.header {
+   background-color: #f1f1f1;
+   padding: 30px;
+   text-align: center;
+   font-size: 30px;
+}
+ 
+/* Create two unequal columns that floats next to each other */
+.column {
+   float: left;
+   /*padding: 10px;*/
+   min-height: 350px;
+}
+ 
+/* Left and right column */
+.column.side {
+   width: 25%;
+   background-color:#aaa;
+   padding: 10px;
+}
+ 
+/* Middle column */
+.column.middle {
+   width: 75%;
+   background-color:#bbb;
+   padding-left: 20px;
+   padding-top: 10px;
+}
+ 
+/* Clear floats after the columns */
+.row:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+ 
+/* Style the footer */
+.footer {
+   background-color: #f1f1f1;
+   padding: 10px;
+   text-align: center;
+}
+ 
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 700px) {
+   .column.side, .column.middle {
+     width: 100%;
+   }
+}
+
+/* Collapsible list styling */
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+   background-color: inherit;
+   color: black;
+   cursor: pointer;
+   padding: 0;
+   width: 100%;
+   border: none;
+   text-align: left;
+   outline: none;
+   font-size: 15px;
+}
+ 
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+   color: white;
+}
+ 
+/* Style the collapsible content. Note: hidden by default */
+.content {
+   padding-top: 0;
+   padding-left: 10px;
+   display: none;
+   overflow: hidden;
+   background-color: inherit;
+}
+
+/* the*/
+.word.link {
+   padding: 5px;
+   content: "";
+   display: table;
+   clear: both;
+   color: inherit;
+}
+
+/* create an icon in the collapsible */
+.collapsible:after {
+   content: '\25C0'; /* Unicode character for left triangle */
+   font-size: 15px;
+   color: black;
+   float: right;
+   margin-left: 5px;
+}
+
+.active:after {
+   content: "\25BC"; /* Unicode character for down triangle */
+}
+ 
